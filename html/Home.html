@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../css/home.css">
+  <title>TuCancha</title>
+</head>
+
+<body style="background-color: rgb(224, 224, 224);">
+  <!--navbar-->
+  <nav class="navbar navbar-expand-lg bg-success" style="margin-bottom: 5pt;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa fa-soccer-ball-o" style="color: white;"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="gap: 20px;">
+          <li class="nav-item">
+            <button type="button" class="btn btn-success"> &lt; Home</button>
+          </li>
+          <li class="nav-item dropdown" style="margin-left: 40px;">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true" style="color: white;">
+              Ubicacion
+            </a>
+            <ul class="dropdown-menu bg-success" style="color: white;">
+              <li><a class="dropdown-item active" href="#" style="color: white;">CABA</a></li>
+              <li>
+                <hr class="dropdown-divider" style="background-color: white;">
+              </li>
+              <li><a class="dropdown-item action"href="#" style="color: white;">GRAN BUENOS AIRES</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+              Tipo
+            </a>
+            <ul class="dropdown-menu bg-success">
+              <li><a class="dropdown-item" href="#" style="color: white;">Futbol 5</a></li>
+              <hr class="dropdown-divider" style="background-color: white;">
+              <li><a class="dropdown-item" href="#" style="color: white;">Futbol 11</a></li>
+              <hr class="dropdown-divider" style="background-color: white;">
+              <li><a class="dropdown-item" href="#" style="color: white;">Futbol Tenis</a></li>
+            </ul>
+          </li>
+          <form class="d-flex col-4" role="search" style="width: 800px; justify-content: center; margin-left: 100px;">
+            <input class="d -flex form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light" type="submit">Buscar</button>
+          </form>
+        </ul>
+        <button type="button" class="btn btn-danger">Salir</button>
+      </div>
+    </div>
+  </nav>
+  <!--Container de canchas-->
+  <div class="container">
+    <div class="row row-cols-4 gy-3">
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N1</h5>
+            <p class="card-text">Cancha techada con iluminacion</p>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N2</h5>
+            <p class="card-text">Cancha techada - Césped artificial</p>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N3</h5>
+            <p class="card-text">Cancha techada - Fútbol Sala: Tenis</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N4</h5>
+            <p class="card-text">Cancha sin techar con iluminacion</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N5</h5>
+            <p class="card-text">Cancha techada con iluminacion</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N6</h5>
+            <p class="card-text">Cancha techada con iluminacion</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N2</h5>
+            <p class="card-text">Cancha techada - Césped artificial</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N2</h5>
+            <p class="card-text">Cancha techada - Césped artificial</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card text-center">
+          <img src="../assets/img/portfolio/fullsize/stockcancha.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cancha N2</h5>
+            <p class="card-text">Cancha techada - Césped artificial</p>
+            <button type="button" class="btn btn-success " data-bs-toggle="modal" data-bs-target="#exampleModal">
+              RESERVAR
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Calendario</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <input type="datetime-local" class="form-control" name="" id="">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <a href="Pagar.html"><button type="button" class="btn btn-success" >Reservar
+          </button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--footer-->
+  <footer class="text-center text-white" style="margin-top: 5px; background-color: rgb(112, 184, 112);">
+    <!-- Copyright -->
+    <div class="text-center text-light p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-light" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+
+
+  <script src="..\js\bootstrap\bootstrap.bundle.js"></script>
+</body>
+
+</html>
