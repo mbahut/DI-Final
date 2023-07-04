@@ -6,18 +6,22 @@
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>PlayFutbol</title>
-        <!-- Favicon-->
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Favicon
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />-->
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-->
+        <!-- Google fonts-
         <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?Tangerine:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-        <!-- SimpleLightbox plugin CSS-->
+        <link href="https://fonts.googleapis.com/css?Tangerine:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />-->
+
+        <!--SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/themestyles.css" rel="stylesheet" />
     </head>
+
+
+    
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -28,8 +32,8 @@
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services"></a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Registrate</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../html/Login.html">Ingresa</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="#portfolio">Registrate</a></li> -->
+                        <!--<li class="nav-item"><a class="nav-link" href="../html/Login.html">Registrate/Login</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -44,7 +48,8 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">Tu pagina de reserva de cancha de futbol favorita</p>
-                        <a class="btn btn-primary btn-xl" href="../html/Login.html" style="background-color: darkgreen;">Ingresar</a>
+                        <a class="btn btn-secondary btn-xl" style="background-color: darkgreen;" onclick="modalLogin.showModal()">Ingresar</a>
+                        <!--<a class="btn btn-primary btn-xl" href="../html/Login.html" style="background-color: darkgreen;">Ingresar</a> -->
                     </div>
                 </div>
             </div>
@@ -58,10 +63,28 @@
                         <hr class="divider divider-light" />
                         <p class="text-white-75 mb-4">Mas de 200 canchas de futbol 5, futbol 7, futbol 11 y futbol tennis trabajan con nosotros. Con mas de 100 años de gestionar canchas.</p>
                         <a class="btn btn-light btn-xl" onclick="modal.showModal()">Contacto</a>
+                        
                     </div>
                 </div>
             </div>
         </section>
+
+        <dialog id="modalRegistrateLogin">
+            <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modalRegistrateLogin.close()"></button>
+        
+
+                <div class="container" style="margin-top: 60px;">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#Registrate" data-toggle="tab">Registrate</a></li>
+                        <li class="active"><a href="#Ingresar" data-toggle="tab">Ingresar</a></li>
+                    </ul>
+
+                </div>
+        </dialog>
+    
+    
+
+
         <!-- Contact-->
         <dialog id="modal">
         <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modal.close()"></button>
@@ -76,12 +99,6 @@
                 </div>
                 <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                     <div class="col-lg-6">
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- * * SB Forms Contact Form * *-->
-                        <!-- * * * * * * * * * * * * * * *-->
-                        <!-- This form is pre-integrated with SB Forms.-->
-                        <!-- To make this form functional, sign up at-->
-                        <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
                         <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                             <!-- Name input-->
@@ -140,6 +157,70 @@
             </div>
         </section>
         </dialog>
+
+        <!-- LOGIN-->
+        
+
+        <dialog id="modalLogin">
+            <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modalLogin.close()"></button>
+            <section class="page-section" id="Login">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6 text-align">
+                            <h2 class="mt-0">Forma Parte de PlayFutbol!</h2>
+                            <hr class="divider" style="background-color: green;" />
+                            <p class="text-muted mb-5">Registrate o Ingresa con tu cuenta</p>
+                        </div>
+                    </div>
+                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                        <div class="col-lg-6">
+                            <!-- to get an API token!-->
+                            <form id="LoginForm" data-sb-form-api-token="API_TOKEN">
+                                <!-- Name input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                    <label for="name">Nombre Completo</label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                </div>
+                                <!-- Email address input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                    <label for="email">Direccion de email</label>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                </div>
+                                <!-- Phone number input-->
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                    <label for="phone">Numero de telefono</label>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                </div>
+        
+                                <div class="d-none" id="submitSuccessMessage">
+                                    <div class="text-center mb-3">
+                                        <div class="fw-bolder">Te registraste correctamente</div>
+                                        En breve te llegará un link a tu email
+                                        <br />
+                                       <!--<a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>-->
+                                    </div>
+                                </div>
+                                <!-- Submit error message-->
+                                <!---->
+                                <!-- This is what your users will see when there is-->
+                                <!-- an error submitting the form-->
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                <!-- Submit Button-->
+                                <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Enviar</button></div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </dialog>
+
+
+
         <!-- Footer-->
         <footer class="bg-light py-5">
             <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
@@ -148,12 +229,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- Core theme JS
+        <script src="js/scripts.js"></script> -->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
