@@ -10,18 +10,15 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />-->
         <!-- Bootstrap Icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-        <!-- Google fonts-
-        <link href="https://fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?Tangerine:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />-->
 
         <!--SimpleLightbox plugin CSS-->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../css/themestyles.css" rel="stylesheet" />
+        <link href="../css/index.css" rel="stylesheet" />
     </head>
 
 
-    
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -32,8 +29,6 @@
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">Contacto</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services"></a></li>
-                        <!--<li class="nav-item"><a class="nav-link" href="#portfolio">Registrate</a></li> -->
-                        <!--<li class="nav-item"><a class="nav-link" href="../html/Login.html">Registrate/Login</a></li>-->
                     </ul>
                 </div>
             </div>
@@ -48,8 +43,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">Tu pagina de reserva de cancha de futbol favorita</p>
-                        <a class="btn btn-secondary btn-xl" style="background-color: darkgreen;" onclick="modalLogin.showModal()">Ingresar</a>
-                        <!--<a class="btn btn-primary btn-xl" href="../html/Login.html" style="background-color: darkgreen;">Ingresar</a> -->
+                        <a class="btn btn-secondary btn-xl" style="background-color: darkgreen;" onclick="modalRegistrateLogin.showModal()">Ingresar</a>  <!-- PROBANDO MODAL CON MENU-->
                     </div>
                 </div>
             </div>
@@ -69,157 +63,224 @@
             </div>
         </section>
 
+        <!-- INICIO modalRegistrateLogin -->
         <dialog id="modalRegistrateLogin">
             <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modalRegistrateLogin.close()"></button>
-        
+                <nav>   
+                    <h2 class="mt-0 text-center" >Bienvenido a PlayFutbol!</h2>
+                    <p class="text-muted mb-5 text-center">Registrate o Ingresa con tu cuenta</p>
+                    <div class="container" style="margin-top: auto;">
+                        <ul class="nav text-center">
+   
+                            <li class=""><a href="#Registrate" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;">Registrate</a></li>
+                            <li class=""><a href="#Ingresar" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;">Ingresar</a></li>
+                        </ul>
+                     <hr>       
+                </nav>
+                    <div class="tab-content" >
+                        <!--INICIO DIV REGISTRATE-->
+                        <div class="tab-pane fade" id="Registrate"> 
 
-                <div class="container" style="margin-top: 60px;">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#Registrate" data-toggle="tab">Registrate</a></li>
-                        <li class="active"><a href="#Ingresar" data-toggle="tab">Ingresar</a></li>
-                    </ul>
-
-                </div>
-        </dialog>
-    
-    
-
-
-        <!-- Contact-->
-        <dialog id="modal">
-        <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modal.close()"></button>
-        <section class="page-section" id="contact">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-8 col-xl-6 text-center">
-                        <h2 class="mt-0">Contactanos!</h2>
-                        <hr class="divider" style="background-color: green;" />
-                        <p class="text-muted mb-5">Mandanos un mensaje con tu consulta o propuesta y te respondemos de inmediato!</p>
-                    </div>
-                </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
-                    <div class="col-lg-6">
-                        <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                            <!-- Name input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                <label for="name">Nombre Completo</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <!-- Email address input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                                <label for="email">Direccion de email</label>
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <!-- Phone number input-->
-                            <div class="form-floating mb-3">
-                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                <label for="phone">Numero de telefono</label>
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                            <!-- Message input-->
-                            <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                                <label for="message">Mensaje</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
-                            </div>
-                            <!-- Submit success message-->
-                            <!---->
-                            <!-- This is what your users will see when the form-->
-                            <!-- has successfully submitted-->
-                            <div class="d-none" id="submitSuccessMessage">
-                                <div class="text-center mb-3">
-                                    <div class="fw-bolder">Form submission successful!</div>
-                                    To activate this form, sign up at
-                                    <br />
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            <section class="page-section" id="Login">
+                                <div class="container">
+                                    <div class="row justify-content-center" style="margin-top: -30%;">
+                                        <div class=" text-center">
+                                            <h2 class="mt-0">Unite al PlayFutbol!</h2>
+                                            <hr class="divider" style="background-color: green;" />
+                                            <p class="text-muted ">Registrate tu cuenta</p>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                                        <div class="col-lg-6">
+                                            <!-- to get an API token!-->
+                                            <form id="LoginForm" data-sb-form-api-token="API_TOKEN">
+                                                <!-- Nombre input-->
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                                    <label for="name">Nombre</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="name:required">Nombre Requerido.</div>
+                                                </div>
+                                                <!-- Email  input-->
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                                    <label for="email">Email</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="email:required">Email Requerido.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email no válido.</div>
+                                                </div>
+                                                <!-- telefono input-->
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="phone" type="phone" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                                    <label for="phone">Telefono</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Celular Requerido.</div>
+                                                </div>
+                                                 <!-- contraseña input-->
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="password" type="password"  data-sb-validations="required" />
+                                                    <label for="password">Clave</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">clave Requerida.</div>
+                                                </div>
+                                                 <!-- repetir contraseña input-->
+                                                 <div class="form-floating mb-3">
+                                                    <input class="form-control" id="password" type="password"  data-sb-validations="required" />
+                                                    <label for="password">Repetir clave</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">clave Requerida.</div>
+                                                </div>
+                                            
+                        
+                                                <div class="d-none" id="submitSuccessMessage">
+                                                    <div class="text-center mb-3">
+                                                        <div class="fw-bolder">Te registraste correctamente</div>
+                                                        En breve te llegará un link a tu email
+                                                        <br />
+                                                    
+                                                    </div>
+                                                </div>
+                                                <!-- Submit error message-->
+                                                <!---->
+                                                <!-- This is what your users will see when there is-->
+                                                <!-- an error submitting the form-->
+                                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">error al enviar mensaje</div></div>
+                                                <!-- Submit Button-->
+                                                <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Enviar</button></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                
                                 </div>
-                            </div>
-                            <!-- Submit error message-->
-                            <!---->
-                            <!-- This is what your users will see when there is-->
-                            <!-- an error submitting the form-->
-                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                            <!-- Submit Button-->
-                            <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Submit</button></div>
-                        </form>
+                            </section>
+                        </div>
+                        <!--FIN DIV REGISTRATE-->
+
+                        <!--INICIO LOGIN-->
+                        <div class="tab-pane fade" id="Ingresar"> 
+
+                            <section class="page-section" id="Ingresar">
+                                <div class="container">
+                                    <div class="row justify-content-center" style="margin-top: -35%;">
+                                        <div class=" text-center">
+                                            <h2 class="mt-0">Ingresa con tus datos</h2>
+                                            
+                                            <hr class="divider" style="background-color: green;" />
+                                            <p class="text-muted ">Ingresa con tu cuenta</p>
+                                        </div>
+                                    </div>
+                                    <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                                        <div class="col-lg-6">
+                                            <!-- to get an API token!-->
+                                            <form id="LoginForm" data-sb-form-api-token="API_TOKEN">
+                                                <!-- Email address input-->
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                                    <label for="email">Email</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="email:required">Email Requerido.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email no válido.</div>
+                                                </div>
+                                                <!-- Phone number input-->
+                                                <div class="form-floating mb-3">
+                                                    <input class="form-control" id="password" type="password" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                                    <label for="password">Clave</label>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">clave Requerida.</div>
+                                                </div>
+                       
+                                                <div class="d-none" id="submitSuccessMessage">
+                                                    <div class="text-center mb-3"></div>  
+                                                    <div class="fw-bolder">Datos correctamente</div>
+                                                    <br/> 
+                                                </div>
+                                                                        
+                                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">error al enviar mensaje</div></div>
+                                                <!-- Submit Button-->
+                                                <div class="d-grid">
+                                                    <a href="Pagar.html">   
+                                                        <button class="btn btn-primary btn-xl disabled" 
+                                                                id="submitButton" 
+                                                                type="submit" 
+                                                                style="background-color: darkgreen;">
+                                                            
+                                                                Enviar
+                                                      
+                                                        </button> 
+                                                    </a>
+                                                        
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                
+                                </div>
+                            </section>
+                        </div>
+                        <!--FIN DIV INGRESAR-->
                     </div>
                 </div>
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                        <i class="bi-phone fs-2 mb-3 text-muted"></i>
-                        <div>+1 (555) 123-4567</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+             
         </dialog>
+     <!-- FIN modalRegistrateLogin-->
+    
 
-        <!-- LOGIN-->
-        
-
-        <dialog id="modalLogin">
-            <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modalLogin.close()"></button>
-            <section class="page-section" id="Login">
+        <!-- Contacto-->
+        <dialog id="modal">
+            <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modal.close()"></button>
+            <section class="page-section" id="contact">
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 justify-content-center">
-                        <div class="col-lg-8 col-xl-6 text-align">
-                            <h2 class="mt-0">Forma Parte de PlayFutbol!</h2>
+                        <div class="col-lg-8 col-xl-6 text-center">
+                            <h2 class="mt-0">Contactanos!</h2>
                             <hr class="divider" style="background-color: green;" />
-                            <p class="text-muted mb-5">Registrate o Ingresa con tu cuenta</p>
+                            <p class="text-muted mb-5">Dejanos tu consulta y te respondemos de inmediato!</p>
                         </div>
                     </div>
                     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
                         <div class="col-lg-6">
                             <!-- to get an API token!-->
-                            <form id="LoginForm" data-sb-form-api-token="API_TOKEN">
+                            <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Name input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                     <label for="name">Nombre Completo</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">Nombre requerido.</div>
                                 </div>
                                 <!-- Email address input-->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                     <label for="email">Direccion de email</label>
-                                    <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:required">Email Requerido.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="email:email">Email no Válido.</div>
                                 </div>
                                 <!-- Phone number input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                    <input class="form-control" id="phone" type="phone" placeholder="(123) 456-7890" data-sb-validations="required" />
                                     <label for="phone">Numero de telefono</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                    <div class="invalid-feedback" data-sb-feedback="phone:required">Celular requerido.</div>
                                 </div>
-        
+                                <!-- Message input-->
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                    <label for="message">Mensaje</label>
+                                    <div class="invalid-feedback" data-sb-feedback="message:required">Mensaje Requerido.</div>
+                                </div>
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
-                                        <div class="fw-bolder">Te registraste correctamente</div>
-                                        En breve te llegará un link a tu email
+                                        <div class="fw-bolder">Mensaje enviado correctamente</div>
                                         <br />
-                                       <!--<a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>-->
+    
                                     </div>
                                 </div>
-                                <!-- Submit error message-->
-                                <!---->
-                                <!-- This is what your users will see when there is-->
-                                <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                                <!-- Submit Button-->
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error al enviar mensaje!</div></div>
                                 <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Enviar</button></div>
                             </form>
                         </div>
                     </div>
-
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                            <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                            <div>+1 (555) 123-4567</div>
+                        </div>
+                    </div>
                 </div>
             </section>
-        </dialog>
-
-
+            </dialog>
+     <!-- fin Contacto-->
 
         <!-- Footer-->
         <footer class="bg-light py-5">
@@ -229,8 +290,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- SimpleLightbox plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
-        <!-- Core theme JS
-        <script src="js/scripts.js"></script> -->
+        <!-- Core theme JS -->
+        <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
