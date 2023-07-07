@@ -18,7 +18,6 @@
         <link href="../css/index.css" rel="stylesheet" />
     </head>
 
-
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
@@ -55,9 +54,8 @@
                     <div class="col-lg-8 text-center">
                         <h2 class="text-white mt-0">Contactate con nosotros</h2>
                         <hr class="divider divider-light" />
-                        <p class="text-white-75 mb-4">Mas de 200 canchas de futbol 5, futbol 7, futbol 11 y futbol tennis trabajan con nosotros. Con mas de 100 años de gestionar canchas.</p>
+                        <p class="text-white-75 mb-4">Canchas de futbol 5, futbol 7 y futbol 11. Con mas de 20 años de experiencia.</p>
                         <a class="btn btn-light btn-xl" onclick="modal.showModal()">Contacto</a>
-                        
                     </div>
                 </div>
             </div>
@@ -68,7 +66,7 @@
             <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modalRegistrateLogin.close()"></button>
                 <nav>   
                     <h2 class="mt-0 text-center" >Bienvenido a PlayFutbol!</h2>
-                    <p class="text-muted mb-5 text-center">Registrate o Ingresa con tu cuenta</p>
+                    <p class="text-muted mb-5 text-center">Podes Registrate Gratis o Ingresar con tu cuenta</p>
                     <div class="container" style="margin-top: auto;">
                         <ul class="nav text-center">
    
@@ -80,14 +78,13 @@
                     <div class="tab-content" >
                         <!--INICIO DIV REGISTRATE-->
                         <div class="tab-pane fade" id="Registrate"> 
-
                             <section class="page-section" id="Login">
                                 <div class="container">
                                     <div class="row justify-content-center" style="margin-top: -30%;">
                                         <div class=" text-center">
                                             <h2 class="mt-0">Unite al PlayFutbol!</h2>
                                             <hr class="divider" style="background-color: green;" />
-                                            <p class="text-muted ">Registrate tu cuenta</p>
+                                            <p class="text-muted ">Registra tu cuenta para ser parte de PlayFutbol</p>
                                         </div>
                                     </div>
                                     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
@@ -96,7 +93,7 @@
                                             <form id="LoginForm" data-sb-form-api-token="API_TOKEN">
                                                 <!-- Nombre input-->
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                                    <input class="form-control" id="name" type="text" placeholder="Nombre" data-sb-validations="required" />
                                                     <label for="name">Nombre</label>
                                                     <div class="invalid-feedback" data-sb-feedback="name:required">Nombre Requerido.</div>
                                                 </div>
@@ -115,15 +112,15 @@
                                                 </div>
                                                  <!-- contraseña input-->
                                                 <div class="form-floating mb-3">
-                                                    <input class="form-control" id="password" type="password"  data-sb-validations="required" />
+                                                    <input class="form-control" id="password" type="password" placeholder="password" data-sb-validations="required" />
                                                     <label for="password">Clave</label>
-                                                    <div class="invalid-feedback" data-sb-feedback="password:required">clave Requerida.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">Clave Requerida.</div>
                                                 </div>
                                                  <!-- repetir contraseña input-->
                                                  <div class="form-floating mb-3">
-                                                    <input class="form-control" id="password" type="password"  data-sb-validations="required" />
+                                                    <input class="form-control" id="password" type="password" placeholder="password"  data-sb-validations="required" />
                                                     <label for="password">Repetir clave</label>
-                                                    <div class="invalid-feedback" data-sb-feedback="password:required">clave Requerida.</div>
+                                                    <div class="invalid-feedback" data-sb-feedback="password:required">Clave Requerida.</div>
                                                 </div>
                                             
                         
@@ -153,13 +150,11 @@
 
                         <!--INICIO LOGIN-->
                         <div class="tab-pane fade" id="Ingresar"> 
-
                             <section class="page-section" id="Ingresar">
                                 <div class="container">
                                     <div class="row justify-content-center" style="margin-top: -35%;">
                                         <div class=" text-center">
                                             <h2 class="mt-0">Ingresa con tus datos</h2>
-                                            
                                             <hr class="divider" style="background-color: green;" />
                                             <p class="text-muted ">Ingresa con tu cuenta</p>
                                         </div>
@@ -184,13 +179,10 @@
                        
                                                 <div class="d-none" id="submitSuccessMessage">
                                                     <div class="text-center mb-3"></div>  
-                                                    <div class="fw-bolder">Datos correctamente</div>
+                                                    <div class="fw-bolder">Login correcto!</div>
                                                     
                                                 <a href="home.html">
-                                                   <button type="button"
-                                                            data-bs-toggle="tab" 
-                                                            class="btn btn-secondary btn-xl" 
-                                                            style="background-color: darkgreen;"> 
+                                                   <button type="button" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;"> 
                                                     Ingresar al HOME
                                                    </button>
                                                 </a>
@@ -200,41 +192,31 @@
                                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">error al enviar mensaje</div></div>
                                                 <!-- Submit Button-->
                                                 <div class="d-grid">
-                                                    
-                                                        <button class="btn btn-primary btn-xl disabled" 
-                                                                id="submitButton" 
-                                                                type="submit" 
-                                                                style="background-color: darkgreen;">
-                                                                Enviar
-                                                        </button> 
-                                                    
-                                                        
+                                                    <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Enviar</button> 
                                                 </div>
                                             </form>
                                         </div>
-                                    </div>
-                
+                                    </div>                
                                 </div>
                             </section>
                         </div>
                         <!--FIN DIV INGRESAR-->
                     </div>
-                </div>
-             
+                </div>             
         </dialog>
      <!-- FIN modalRegistrateLogin-->
     
 
-        <!-- Contacto-->
+    <!-- Contacto-->
         <dialog id="modal">
-            <button type="button" class="btn-close" aria-label="Close" style="right: auto; " onclick="modal.close()"></button>
+            <button type="button" class="btn-close" aria-label="Close" style="right: auto;" onclick="modal.close()"></button>
             <section class="page-section" id="contact">
                 <div class="container px-4 px-lg-5">
                     <div class="row gx-4 gx-lg-5 justify-content-center">
                         <div class="col-lg-8 col-xl-6 text-center">
                             <h2 class="mt-0">Contactanos!</h2>
                             <hr class="divider" style="background-color: green;" />
-                            <p class="text-muted mb-5">Dejanos tu consulta y te respondemos de inmediato!</p>
+                            <p class="text-muted mb-5">Dejanos tu consulta o inquietud y te respondemos de inmediato!</p>
                         </div>
                     </div>
                     <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
@@ -269,8 +251,7 @@
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
                                         <div class="fw-bolder">Mensaje enviado correctamente</div>
-                                        <br />
-    
+                                        <br/>
                                     </div>
                                 </div>
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error al enviar mensaje!</div></div>
@@ -291,7 +272,7 @@
 
         <!-- Footer-->
         <footer class="bg-light py-5">
-            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company Name</div></div>
+            <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - Company PlayFutbol</div></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

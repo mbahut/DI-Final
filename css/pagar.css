@@ -5,6 +5,7 @@ body {
 }
 
 button {
+    width: auto;
     background-color: #198754;
     border: 1px, solid, #198754;
     border-radius: 2px;
@@ -97,13 +98,15 @@ footer p{
 }
 
 input {
+
+    display: flex;
     border: 1px solid #ccc;
     color: black;
     font-size: 22px;
     font-size: var(--large-mobile-font-size);
     padding: 15px;
-    width: 90%;
-    width: calc(100% - 30px);
+    width: 50%;
+    
 }
   
 ul{

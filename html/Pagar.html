@@ -11,29 +11,28 @@
 <body>
     <header>
         <h1>⚽</h1>
-        <h1 class="titulo">Abonar la Reserva</h1>
+        <h1 class="titulo">Abonar</h1>
         <ul>
             <li class="menu"><a style="text-decoration: none;" href="../html/index.html">Inicio</a></li>
             <li class="menu"><a style="text-decoration: none;" href="home.html">Home</a></li>
-            <li class="menu"><a style="text-decoration: none;" href="#footer">Footer</a></li>
-        </ul>
+
     </header>
-    <h3 style="color: black;"> Completa datos de pago:</h3>
+   
     <section class="container">
         <div class="formulario">
             <form id="formulario">
-                <label style="color: black;" for="numero_tarjeta">Numero de tarjeta</label>
+                <label style="color: black;" for="numero_tarjeta">Numero TC</label>
                 <input type="text" id="numero_tarjeta" placeholder="4770 5300 0454 4058" required> <br><br>
-                <label style="color: black;" for="nombre_tarjeta">Nombre del titular</label>
+                <label style="color: black;" for="nombre_tarjeta">Nombre</label>
                 <input type="text" id="nombre_tarjeta" placeholder="Christian Fincic" required><br><br>
                 <label style="color: black;" for="email">Email</label>
-                <input type="text" id="email" placeholder="tuemail@gmail.com" required> <br><br>
-                <label style="color: black;" for="fecha_tarjeta">Fecha de vencimiento</label>
+                <input type="text" id="email" placeholder="email@gmail.com" required> <br><br>
+                <label style="color: black;" for="fecha_tarjeta">Vencimiento</label>
                 <input type="text" id="fecha_tarjeta" placeholder="MMY/Y" maxlength="4" required> <br><br>
                 <label style="color: black;" for="cvv">CVV</label>
                 <input type="text" id="CVV" maxlength="3" required><br><br>
                 <label style="color: black;" for="Monto">Monto</label>
-                <input type="text" id="Monto" placeholder="6500" maxlength="8" disabled><br><br>
+                <input type="text" id="Monto" placeholder="12000" maxlength="8" disabled><br><br>
                 <button id="completar_pago">PAGAR</button>
             </form>
         </div>
@@ -41,6 +40,6 @@
     <footer id="footer">
         <p class="logo">⚽</p>
     </footer>
-    <script src="../js/Pagar.js"></script>
+    <script src="../js/pagar.js"></script>
 </body>
 </html>
