@@ -72,6 +72,7 @@
    
                             <li class=""><a href="#Registrate" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;">Registrate</a></li>
                             <li class=""><a href="#Ingresar" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;">Ingresar</a></li>
+                            <li class=""><a href="#Recuperar" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;">Recuperar pass</a></li>
                         </ul>
                      <hr>       
                 </nav>
@@ -80,7 +81,7 @@
                         <div class="tab-pane fade" id="Registrate"> 
                             <section class="page-section" id="Login">
                                 <div class="container">
-                                    <div class="row justify-content-center" style="margin-top: -30%;">
+                                    <div class="row justify-content-center" style="margin-top: -20%;">
                                         <div class=" text-center">
                                             <h2 class="mt-0">Unite al PlayFutbol!</h2>
                                             <hr class="divider" style="background-color: green;" />
@@ -148,11 +149,11 @@
                         </div>
                         <!--FIN DIV REGISTRATE-->
 
-                        <!--INICIO LOGIN-->
+                        <!--INICIO INGRESAR-->
                         <div class="tab-pane fade" id="Ingresar"> 
                             <section class="page-section" id="Ingresar">
                                 <div class="container">
-                                    <div class="row justify-content-center" style="margin-top: -35%;">
+                                    <div class="row justify-content-center" style="margin-top: -20%;">
                                         <div class=" text-center">
                                             <h2 class="mt-0">Ingresa con tus datos</h2>
                                             <hr class="divider" style="background-color: green;" />
@@ -178,35 +179,83 @@
                                                 </div>
                        
                                                 <div class="d-none" id="submitSuccessMessage">
-                                                    <div class="text-center mb-3"></div>  
-                                                    <div class="fw-bolder">Login correcto!</div>
+                                                    <div class="text-center mb-3"></div>
+                                                    <div class="fw-bolder">Login correcto!</div><br>
                                                     
-                                                <a href="home.html">
-                                                   <button type="button" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;"> 
-                                                    Ingresar al HOME
-                                                   </button>
-                                                </a>
+                                                    <a href="home.html">
+                                                    <button type="button" data-bs-toggle="tab" class="btn btn-secondary btn-xl" style="background-color: darkgreen;"> 
+                                                        Ingresar al HOME
+                                                    </button>
+                                                    </a>
                                                     <br/> 
                                                 </div>
-                                                                        
                                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">error al enviar mensaje</div></div>
                                                 <!-- Submit Button-->
                                                 <div class="d-grid">
                                                     <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Enviar</button> 
+                                                    <br>
                                                 </div>
                                             </form>
                                         </div>
-                                    </div>                
+                                    </div>     
                                 </div>
                             </section>
                         </div>
                         <!--FIN DIV INGRESAR-->
+
+
+                        <!--INICIO RECUPERAR contraseña-->
+                <div class="tab-pane fade" id="Recuperar"> 
+                    <section class="page-section" id="Recuperar">
+                        <div class="container">
+                            <div class="row justify-content-center" style="margin-top: -20%;">
+                                <div class=" text-center">
+                                    <h2 class="mt-0">Recuperacion de contraseña</h2>
+                                    <hr class="divider" style="background-color: green;" />
+                                    <p class="text-muted ">Ingresa tu cuenta</p>
+                                </div>
+                            </div>
+                            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                                <div class="col-lg-6">
+                                    <!-- to get an API token!-->
+                                    <form id="recuperar" data-sb-form-api-token="API_TOKEN">
+                                        <!-- Email address input-->
+                                        <div class="form-floating mb-3">
+                                            <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                            <label for="email">Email</label>
+                                            <div class="invalid-feedback" data-sb-feedback="email:required">Email Requerido.</div>
+                                            <div class="invalid-feedback" data-sb-feedback="email:email">Email no válido.</div>
+                                        </div>
+                                    
+                                        <div class="d-none" id="submitSuccessMessage">
+                                            <div class="text-center mb-3"></div>
+                                            <div class="fw-bolder">Se envió Correo electronico</div><br>
+    
+                                            <br/> 
+                                        </div>
+                                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">error al enviar mensaje</div></div>
+                                        <!-- Submit Button-->
+                                        <div class="d-grid">
+                                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit" style="background-color: darkgreen;">Recuperar Contraseña</button> 
+                                            <br>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>     
+                        </div>
+                    </section>
+                </div>
+                <!--FIN  RECUPERAR contraseña-->
+                
                     </div>
-                </div>             
+                </div>    
+                
+                
+                
         </dialog>
      <!-- FIN modalRegistrateLogin-->
-    
 
+                            
     <!-- Contacto-->
         <dialog id="modal">
             <button type="button" class="btn-close" aria-label="Close" style="right: auto;" onclick="modal.close()"></button>
